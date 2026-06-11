@@ -11,5 +11,3 @@ spec:
   - name: debug
     image: vivekguvvala/debug:v1
     imagePullPolicy: Always
-    ports:
-    - containerPort: 80
