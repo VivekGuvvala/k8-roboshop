@@ -1,11 +1,11 @@
 apiVersion: v1
-kind: configMap
+kind: ConfigMap
 metadata:
   name: catalogue
   namespace: roboshop
 data:
   MONGO: "true"
-  MONGO_URL:  "mongodb://mongo:27017/catalogue"
+  MONGO_URL:  "mongodb://mongodb:27017/catalogue"
 
 ---
 apiVersion: apps/v1  # Fixed: added the missing 's' to apps
@@ -36,7 +36,7 @@ spec:
           image: vivekguvvala/catalogue:v1
           imagePullPolicy: Always
           envFrom:
-          - configMapReference:
+          - configMapRef:
             name: catalogue
           readinessProbe:
             httpGet:
