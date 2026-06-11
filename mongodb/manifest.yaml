@@ -1,4 +1,4 @@
-apiVersion: app/v1
+apiVersion: apps/v1  # Fixed: added the missing 's' to apps
 kind: Deployment
 metadata:
   name: mongodb
@@ -10,10 +10,10 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLables:
-    project: roboshop
-    component: mongodb
-    tier: db
+    matchLabels: # Fixed: changed from matchLables to matchLabels and fixed indentation
+      project: roboshop
+      component: mongodb
+      tier: db
   template:
     metadata:
       labels:
