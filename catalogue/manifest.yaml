@@ -24,6 +24,7 @@ spec:
       containers:
         - name: catalogue
           image: vivekguvvala/catalogue:v1
+          imagePullPolicy: Always
           readinessProbe:
             httpGet:
               path: /health
