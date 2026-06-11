@@ -37,7 +37,7 @@ spec:
           imagePullPolicy: Always
           envFrom:
           - configMapRef:
-            name: catalogue
+              name: catalogue
           readinessProbe:
             httpGet:
               path: /health
