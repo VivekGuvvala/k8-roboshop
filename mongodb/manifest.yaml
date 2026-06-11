@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: app/v1
 kind: Deployment
 metadata:
   name: mongodb
@@ -10,11 +10,11 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchlables:
+    matchLables:
     project: roboshop
     component: mongodb
     tier: db
-  templete:
+  template:
     metadata:
       labels:
         project: roboshop
