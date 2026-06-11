@@ -29,7 +29,7 @@ spec:
               port: 27017
             initialDelaySeconds: 10
             periodSeconds: 10
-          livenesProbe:
+          livenessProbe:
             tcpSocket:
               port: 27017
             initialDelaySeconds: 10
